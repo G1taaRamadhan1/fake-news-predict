@@ -79,8 +79,5 @@ if st.button("Deteksi"):
 
 # Catatan kaki (opsional)
 st.markdown("---")
-<<<<<<< HEAD
 st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
-=======
 st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
->>>>>>> origin/master

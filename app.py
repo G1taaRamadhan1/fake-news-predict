@@ -18,6 +18,7 @@ def download_nltk_resources(resource):
         nltk.download(resource)
         st.info(f"Resource NLTK '{resource}' berhasil diunduh.")
 
+nltk.download('punkt_tab')
 # Unduh resource 'punkt' untuk tokenisasi
 # download_nltk_resources('tokenizers/punkt')
 

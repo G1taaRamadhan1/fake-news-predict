@@ -30,7 +30,7 @@ def download_nltk_resources(resource):
 # stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
-def preprocess_text(text):
+def preprocess_text(text, stop_words):
     if isinstance(text, str):
         text = text.translate(str.maketrans('', '', string.punctuation))
         text = re.sub(r'[^a-zA-Z\s]', '', text, re.I)
@@ -60,7 +60,7 @@ news_text = st.text_area("Teks Berita", height=200)
 if st.button("Deteksi"):
     if news_text:
         # Pra-pemrosesan teks input
-        processed_text = preprocess_text(news_text)
+        processed_text = preprocess_text(news_text, stop_words) # Kirimkan stop_words sebagai argumen
 
         # Vectorize teks input menggunakan vectorizer yang sama
         text_vectorized = tfidf_vectorizer.transform([processed_text])

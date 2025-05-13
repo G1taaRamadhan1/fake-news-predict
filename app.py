@@ -25,8 +25,8 @@ def download_nltk_resources(resource):
 #Unduh stopwords jika belum pernah
 try:
     stopwords.words('english')
-except LookupError:
-    download_nltk_resources('corpora/stopwords')
+# except LookupError:
+#     download_nltk_resources('corpora/stopwords')
 stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)

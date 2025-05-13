@@ -18,19 +18,16 @@ def download_nltk_resources(resource):
         nltk.download(resource)
         st.info(f"Resource NLTK '{resource}' berhasil diunduh.")
 
+
 # Unduh resource 'punkt' untuk tokenisasi
 download_nltk_resources('tokenizers/punkt')
 
-# Unduh stopwords jika belum pernah
+#Unduh stopwords jika belum pernah
 try:
     stopwords.words('english')
 except LookupError:
     download_nltk_resources('corpora/stopwords')
 stop_words = set(stopwords.words('english'))
-
-download_nltk_resources('corpora/wordnet')
-from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
 def preprocess_text(text):
@@ -83,5 +80,4 @@ if st.button("Deteksi"):
 
 # Catatan kaki (opsional)
 st.markdown("---")
-st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
 st.markdown("Developed using Streamlit and a trained Logistic Regression model.")

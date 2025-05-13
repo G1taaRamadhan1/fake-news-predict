@@ -23,11 +23,11 @@ def download_nltk_resources(resource):
 # download_nltk_resources('tokenizers/punkt')
 
 #Unduh stopwords jika belum pernah
-# try:
-#     stopwords.words('english')
-# except LookupError:
-#     download_nltk_resources('corpora/stopwords')
-# stop_words = set(stopwords.words('english'))
+try:
+    stopwords.words('english')
+except LookupError:
+    download_nltk_resources('corpora/stopwords')
+stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
 def preprocess_text(text, stop_words):

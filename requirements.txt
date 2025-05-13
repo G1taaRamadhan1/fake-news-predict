@@ -11,8 +11,4 @@ nltk
 cloudpickle 
 pickleshare 
 joblib
-<<<<<<< HEAD
 setuptools
-=======
-setuptools
->>>>>>> origin/master

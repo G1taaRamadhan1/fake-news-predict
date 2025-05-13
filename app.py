@@ -28,6 +28,10 @@ except LookupError:
     download_nltk_resources('corpora/stopwords')
 stop_words = set(stopwords.words('english'))
 
+download_nltk_resources('corpora/wordnet')
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
 def preprocess_text(text):
     if isinstance(text, str):
@@ -79,8 +83,5 @@ if st.button("Deteksi"):
 
 # Catatan kaki (opsional)
 st.markdown("---")
-<<<<<<< HEAD
 st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
-=======
 st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
->>>>>>> origin/master

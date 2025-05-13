@@ -84,5 +84,4 @@ if st.button("Deteksi"):
 
 # Catatan kaki (opsional)
 st.markdown("---")
-st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
-st.markdown("Developed using Streamlit and a trained Logistic Regression model.")
+st.markdown("Developed using Streamlit and a trained Logistic Regression model By Group 2 data Alchemist.")

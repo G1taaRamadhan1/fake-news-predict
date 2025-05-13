@@ -20,7 +20,7 @@ def download_nltk_resources(resource):
 
 
 # Unduh resource 'punkt' untuk tokenisasi
-download_nltk_resources('tokenizers/punkt')
+# download_nltk_resources('tokenizers/punkt')
 
 #Unduh stopwords jika belum pernah
 try:

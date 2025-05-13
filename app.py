@@ -18,16 +18,16 @@ def download_nltk_resources(resource):
         nltk.download(resource)
         st.info(f"Resource NLTK '{resource}' berhasil diunduh.")
 
-nltk.download('punkt_tab')
-# Unduh resource 'punkt' untuk tokenisasi
-# download_nltk_resources('tokenizers/punkt')
 
-# Unduh stopwords jika belum pernah
-# try:
-#     stopwords.words('english')
-# except LookupError:
-#     download_nltk_resources('corpora/stopwords')
-# stop_words = set(stopwords.words('english'))
+# Unduh resource 'punkt' untuk tokenisasi
+download_nltk_resources('tokenizers/punkt')
+
+#Unduh stopwords jika belum pernah
+try:
+    stopwords.words('english')
+except LookupError:
+    download_nltk_resources('corpora/stopwords')
+stop_words = set(stopwords.words('english'))
 
 # Fungsi untuk pra-pemrosesan teks (sesuaikan dengan yang Anda gunakan)
 def preprocess_text(text):

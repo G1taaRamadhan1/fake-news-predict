@@ -19,7 +19,7 @@ def download_nltk_resources(resource):
         st.info(f"Resource NLTK '{resource}' berhasil diunduh.")
 
 # Unduh resource 'punkt' untuk tokenisasi
-download_nltk_resources('tokenizers/punkt')
+# download_nltk_resources('tokenizers/punkt')
 
 # Unduh stopwords jika belum pernah
 try:
